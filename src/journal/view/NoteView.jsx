@@ -2,7 +2,7 @@ import { Padding, SaveOutlined } from "@mui/icons-material"
 import { Button, Grid, TextField, Typography } from "@mui/material"
 import { ImageGallery } from "../components"
 
-export const NoteView = () => {
+export const NoteView = ({ title, body, id, date, imageUrls = [] }) => {
   return (
     <Grid 
         container 
@@ -28,6 +28,7 @@ export const NoteView = () => {
                 fullWidth
                 placeholder="Ingrese un titulo"
                 label="Titulo"
+                value={ title }
                 sx={{ border: "none" , mb: 1 }}
             />
             <TextField
